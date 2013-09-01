@@ -1,0 +1,160 @@
+// Place all the styles related to the Projects controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$iconSpritePath: '';
+$iconWhiteSpritePath: '';
+@import "bootstrap";
+
+@font-face {
+    font-family: 'orange_juiceregular';
+    src: url(font_path('orange_juice_2.0-webfont.eot'));
+    src: url(font_path('orange_juice_2.0-webfont.eot?#iefix')) format('embedded-opentype'),
+         url(font_path('orange_juice_2.0-webfont.woff')) format('woff'),
+         url(font_path('orange_juice_2.0-webfont.ttf')) format('truetype'),
+         url(font_path('orange_juice_2.0-webfont.svg#orange_juiceregular')) format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.project_text {
+	color:white; 
+	text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
+}
+
+.task_container {
+	border-style: solid;
+	border-width: 1px;
+	border-color: grey;
+	margin-left: 157px ;
+	margin-bottom: 8%;
+	border-bottom-right-radius: 10px ; 
+	border-bottom-left-radius: 10px ;
+	background: white;
+	height: 100%;
+	-webkit-box-shadow: 5px 5px 5px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    5px 5px 5px rgba(50, 50, 50, 0.75);
+	box-shadow:         5px 5px 5px rgba(50, 50, 50, 0.75);
+}
+
+.table-bordered {
+  	-webkit-border-radius: 0px;
+  	-moz-border-radius: 0px;
+  	border-radius: 0px; }
+
+.table-bordered tbody:first-child tr:first-child > th:first-child {
+    -webkit-border-top-left-radius: 0px;
+    -moz-border-radius-topleft: 0px;
+    border-top-left-radius: 0px; }
+.table-bordered thead:last-child tr:last-child > th:first-child,
+.table-bordered tbody:last-child tr:last-child > td:first-child, 
+.table-bordered tbody:last-child tr:last-child > th:first-child, 
+.table-bordered tfoot:last-child tr:last-child > td:first-child, 
+.table-bordered tfoot:last-child tr:last-child > th:first-child {
+border-bottom-left-radius: 0px;
+}
+
+.project_name {
+	height: 50px;
+	background: #7db9e8; /* Old browsers */
+	background: -moz-linear-gradient(top,  #7db9e8 0%, #235ddb 52%, #1e5799 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7db9e8), color-stop(52%,#235ddb), color-stop(100%,#1e5799)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #7db9e8 0%,#235ddb 52%,#1e5799 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #7db9e8 0%,#235ddb 52%,#1e5799 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #7db9e8 0%,#235ddb 52%,#1e5799 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #7db9e8 0%,#235ddb 52%,#1e5799 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#1e5799',GradientType=0 ); /* IE6-9 */
+}
+
+.input_form {
+	margin: 10px 0px 10px 20px;
+}
+
+.new_task {
+	margin: 2px 0px 4px 0px;
+}
+
+.plus {
+	margin-left: 15px;
+	color: #247F42;
+    -webkit-text-fill-color: #247F42;
+    -webkit-text-stroke: 1px black;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+#follow {
+margin: 0px;
+z-index: 2;
+position: fixed;
+top: 90%;
+left: 0;
+width: 100%;
+height: 10%;
+background: -moz-linear-gradient(top,  rgba(5,5,5,0) 0%, rgba(5,5,5,0) 5%, rgba(4,4,4,0.49) 26%, rgba(3,3,3,0.77) 49%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(5,5,5,0)), color-stop(5%,rgba(5,5,5,0)), color-stop(26%,rgba(4,4,4,0.49)), color-stop(49%,rgba(3,3,3,0.77)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(5,5,5,0) 0%,rgba(5,5,5,0) 5%,rgba(4,4,4,0.49) 26%,rgba(3,3,3,0.77) 49%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(5,5,5,0) 0%,rgba(5,5,5,0) 5%,rgba(4,4,4,0.49) 26%,rgba(3,3,3,0.77) 49%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(5,5,5,0) 0%,rgba(5,5,5,0) 5%,rgba(4,4,4,0.49) 26%,rgba(3,3,3,0.77) 49%,rgba(0,0,0,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(5,5,5,0) 0%,rgba(5,5,5,0) 5%,rgba(4,4,4,0.49) 26%,rgba(3,3,3,0.77) 49%,rgba(0,0,0,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00050505', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+
+}
+
+#follow .input-append {
+	position: relative;
+	left: 50%;
+	margin-left: -168px;
+	margin-top: 40px;
+}
+
+.put_ok {
+	background-color: transparent;
+}
+
+input[type="checkbox"] {
+	margin: 0px 0px 1px 2px;
+	line-height: normal;
+}
+
+.header_font {
+	margin: 40px 0px 100px 0px;
+	font-family: 'orange_juiceregular';
+	font-size: 90px;
+	color: #14DAFF;
+}
+
+.background {
+-moz-transition: background-color 0.0s 0.0s ease;
+-o-transition: background-color 0.0s 0.0s ease;
+-webkit-transition: background-color 0.0s 0.0s ease;
+}
+
+tbody.background:hover {
+background: -moz-linear-gradient(top,  rgba(255,255,0,0.2) 0%, rgba(255,251,0,0.73) 49%, rgba(255,246,0,0.2) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,0,0.2)), color-stop(49%,rgba(255,251,0,0.73)), color-stop(100%,rgba(255,246,0,0.2))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(255,255,0,0.2) 0%,rgba(255,251,0,0.73) 49%,rgba(255,246,0,0.2) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(255,255,0,0.2) 0%,rgba(255,251,0,0.73) 49%,rgba(255,246,0,0.2) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(255,255,0,0.2) 0%,rgba(255,251,0,0.73) 49%,rgba(255,246,0,0.2) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(255,255,0,0.2) 0%,rgba(255,251,0,0.73) 49%,rgba(255,246,0,0.2) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33ffff00', endColorstr='#33fff600',GradientType=0 ); /* IE6-9 */
+}
+
+.input-block-level {
+display: block;
+width: 100%;
+min-height: 30px;
+box-sizing: border-box;
+}
+
+a.black {
+	color: rgb(51, 51, 51);
+	text-decoration: none;
+}
+
+.delete_task {
+	margin: 0px 4px;
+}

@@ -1,0 +1,30 @@
+    <div class="span8 task_container">
+        <div class="project_name background">
+        <div style="height: 15px;"></div>
+            <i class="icon-list-alt icon-2x" style="display:inline; padding-left:9px;">
+            <span class="project_text" data-url="/projects/<%=project.id%>"> <%= project.name %> </span>
+            </i>
+            
+            <div class="block" style="float: right; margin-right: 20px;">
+                <%= link_to '', project_path(project), remote: true, 
+                                                        method: :delete, 
+                                                        class: "delete_project icon-trash icon-2x black", 
+                                                        data: {confirm: 'Are you sure?'} %>
+                 <span style="margin-left: 10px; font-size: 20px;"> | </span>
+                <a href='#' class='edit_project_link icon-pencil icon-2x black'></a>
+            </div>
+        </div>
+        <div style="background-color: #DEDEDE; position: relative;" >
+            <i class="icon-plus icon-2x plus"></i>
+            <div class="input-append input_form new_task input_form">
+        <%= form_for [project, @task_new], remote: true do |form| %>
+                <%= form.hidden_field :project_id, value: project.id %>
+                <div class="span6" id="appendedInputButtons">
+                    <%= form.text_field :name, class: "span6" %>
+                    <button class="btn btn-primary" type="submit">Add Task</button>
+                </div>
+        <%end%>
+            </div>
+        </div>
+        <%= render 'tasks/tasks_form', project: project %>
+    </div>

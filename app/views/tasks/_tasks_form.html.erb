@@ -1,0 +1,7 @@
+<div>
+    <table class="table table-bordered tasks_form">
+	<% project.tasks.order('priority DESC').each do |task| %>
+    	<%= render 'tasks/task_form', project: project, task: task %>
+    <% end %>
+    </table>
+</div>

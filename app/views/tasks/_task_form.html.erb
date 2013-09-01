@@ -1,0 +1,42 @@
+
+    <tbody class="background task">
+        <th>
+            <span>
+                <input type="checkbox" <%= "checked" if task.status %> class="status_ok<%=" put_ok" if task.status%>" data-id="<%=task.id%>">
+            </span>
+        </th>
+        <th width="460px">
+            <div>
+                <p class="task_title" 
+                data-url="/projects/<%=project.id%>/tasks/<%=task.id%>"
+                style="display: inline; font-size: 16px;"><%= task.name %></p>
+                <span class="deadline" style="float: right">
+                    <a href="#" class="deadline_picker black" data-type="date" 
+                                data-url="/projects/<%=project.id%>/tasks/<%=task.id%>">
+                                <% if task.deadline.nil? %>
+                                <i class="icon-calendar" style="color: rgb(51, 51, 51);"></i>
+                                <% else %>
+                                    <% if task.deadline < Time.now %>
+                                    <p style="color: red; margin: 0;"><%= task.deadline.strftime("%d/%m/%Y") %></p>
+                                    <% else %>
+                                    <%= task.deadline.strftime("%d/%m/%Y") %>
+                                    <% end %>
+                                <% end %></a>
+                </span>
+            </div>
+         </th>
+            <th>
+            <div style="float: right; font-size: 16px;" class="block">
+            <%= link_to "", up_project_task_path(project, task), method: :put, 
+                class: "up icon-arrow-up black", remote: true %>
+            <%= link_to "", down_project_task_path(project, task), method: :put, 
+                class: "down icon-arrow-down black", remote: true %> |
+            <a href='#' class="edit_task_link icon-pencil black"></a> |
+            <%= link_to "", project_task_path(project, task),remote: true, 
+                                                            method: 'delete', 
+                                                            class: "delete_task icon-trash black",
+                                                            data: {confirm: 'Are you sure?'} %>
+            </div>
+        </th>
+    </tbody>
+

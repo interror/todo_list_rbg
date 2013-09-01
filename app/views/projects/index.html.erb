@@ -1,0 +1,9 @@
+<%= render 'projects' %>
+    <div id='follow'>
+		<%= form_for @project_new, remote: true do |f| %>
+		<span class="input-append" align: "ceneter">
+			<%= f.text_field :name %>
+			<button type="submit" class="btn btn-inverse" align="ceneter" >Create Project</button>
+		</span>
+		<%end%>
+    </div>

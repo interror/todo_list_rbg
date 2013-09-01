@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: 
+  status: 
+  deadline: 
+  priority: 1
+  belongs_to: 
+
+two:
+  name: 
+  status: 
+  deadline: 
+  priority: 1
+  belongs_to: 
