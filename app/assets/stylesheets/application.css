@@ -13,11 +13,3 @@
  *= require bootstrap-editable
  *= require_tree .
  */
-
-body {
-	background-image: url("background.jpg");
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	width: 100%;
-	height: 100%;
-}
