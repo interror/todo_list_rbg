@@ -1,18 +1,14 @@
 development:
-  adapter: postgresql
-  encoding: unicode
-  database: Todo
+  adapter: sqlite3
+  database: db/development.sqlite3
   pool: 5
-  username: postgres
-  password: digitalogo
+  timeout: 5000
 
 test:
-  adapter: postgresql
-  encoding: unicode
-  database: Todo
+  adapter: sqlite3
+  database: db/test.sqlite3
   pool: 5
-  username: postgres
-  password: digitalogo
+  timeout: 5000
 
 production:
   adapter: postgresql

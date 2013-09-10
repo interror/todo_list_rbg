@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20130830111411) do
 
   create_table "tasks", force: true do |t|
     t.string   "name"
-    t.boolean  "status",     default: false
+    t.boolean  "status",     limit: 255
     t.date     "deadline"
     t.integer  "priority"
     t.integer  "project_id"

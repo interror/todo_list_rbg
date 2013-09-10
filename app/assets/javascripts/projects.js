@@ -127,7 +127,7 @@ $(function() {
           .on('click', '.edit_task_link', edit_task_name)
           .on('ajax:success', '.new_task', add_new_task)
           .on('click', '.status_ok', checkbox_ok)
-          .on('click', '.deadline_picker', deadline)
+          .on('click', '.take_deadline', deadline)
           .on('ajax:success', '.up', move_higher)
           .on('ajax:success', '.down', move_lower)
 });
